@@ -1,0 +1,16 @@
+let a = window;
+console.log(a);
+confirm("Are you sure to reload this page");
+let b = window.document;
+console.log(b);
+console.log(window.innerHeight);
+console.log(window.outerHeight);
+console.log(window.innerWidth);
+console.log(window.outerWidth);
+console.log(window.scrollX);
+console.log(window.scrollY);
+console.log(window.location);
+console.log(window.location.toString());
+console.log(window.history);
+console.log(window.history.length);
+console.log(window.history.go(1));
