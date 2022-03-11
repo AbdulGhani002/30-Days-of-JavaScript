@@ -1,0 +1,12 @@
+const grandParent = document.querySelector("#grand-parent");
+grandParent.style.color = "red";
+const parentOne = grandParent.children[0];
+parentOne.style.color = "green";
+const parentTwo = grandParent.children[1];
+parentTwo.style.color = "blue";
+const childOne = parentOne.children[0];
+childOne.style.color = "brown";
+const childTwo = parentOne.children[1];
+childTwo.style.color = "hotpink";
+// const grandParent2 = parentOne.closest("#grand-parent");
+// grandParent2.style.backgroundColor = "black";

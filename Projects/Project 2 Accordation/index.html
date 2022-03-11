@@ -5,122 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordation</title>
-    <link rel="shortcut icon" href="accordion-svgrepo-com.svg" type="image/x-icon">
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #34495e;
-  color: #fff;
-}
-h1 , h2{
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 2.5rem;
-}
-nav{
-  background-color: #34495e;
-  padding: 1rem 2rem;
-  margin: auto;
-  width: 80%;
-  border: 1px solid #ff9ff3;
-  color: #ff9ff3;
-  transition: all 1.6s ease-in-out 0s;
-  border-radius: 10px;
-}
-nav:hover{
-  background-color: #ff9ff3;
-  color: white;
-  border-radius: 100%;
-}
-footer{
-  background-color: #34495e;
-  padding: 1rem 2rem;
-  margin: auto;
-  width: 80%;
-  border: 1px solid #ff9ff3;
-  color: #ff9ff3;
-  transition: all 1.6s ease-in-out 0s;
-  border-radius: 10px; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-button{
-  background-color: #34495e;
-  border: 1px solid #ff9ff3;
-}
-button a{
-  text-decoration: none;
-  color: #ff9ff3;
-  padding: 5px 10px;
-  font-size: 1.2rem;
-  font-weight: bolder;
-  transition: all 0.7s ease-in-out 0s;
-}
-button a:hover{
-  text-decoration: none;
-  color: #fff;
-  border-color: #ff9ff3;
-  font-weight: bolder;
-  background-color: #ff9ff3;
-  overflow: hidden;
-}
-.accordion {
-  width: 90%;
-  max-width: 1000px;
-  margin: 2rem auto;
-}
-.accordion-item {
-  background-color: #fff;
-  color: #111;
-  margin: 1rem 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
-}
-.accordion-item-header {
-  padding: 0.5rem 3rem 0.5rem 1rem;
-  min-height: 3.5rem;
-  line-height: 1.25rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-}
-.accordion-item-header::after {
-  content: "\002B";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-}
-.accordion-item-header.active::after {
-  content: "\2212";
-}
-.accordion-item-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-.accordion-item-body-content {
-  padding: 1rem;
-  line-height: 1.5rem;
-  border-top: 1px solid;
-  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
-}
-
-@media(max-width:767px) {
-  html {
-    font-size: 14px;
-  }
-}
-    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3025343628518875"
+     crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="index.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header>
@@ -168,7 +56,6 @@ button a:hover{
               <li>Browser Developer Tools</li>
               <li>Web Performance</li>
               <li>SEO (Search Engine Optimization)</li>
-              <!-- <li>CSS Preprocessing</li> -->
               <li>Command Line</li>
               <li>CMS (Content Management System)</li>
             </ul>
@@ -202,33 +89,14 @@ button a:hover{
     <footer>
       <h3>&copy;copyright</h3>
       <p>All Copyrights are reserved</p>
-      <button class="ag"><a class="ag" href="mailto:itsaghani@gmail.com.net?cc=itsaghani@yahoo.com&subject=Hello Abdul Ghani">Contact Me</a></button>
+      <button class="ag">
+        <a
+          class="ag"
+          href="mailto:itsaghani@gmail.com?cc=itsaghani@yahoo.com&subject=Hello Abdul Ghani"
+          >Contact Me</a
+        >
+      </button>
     </footer>
-    <script>
-      const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
-
-accordionItemHeaders.forEach(accordionItemHeader => {
-  accordionItemHeader.addEventListener("click", event => {
-    
-    // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
-    
-    // const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-    // if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-    //   currentlyActiveAccordionItemHeader.classList.toggle("active");
-    //   currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
-    // }
-
-    accordionItemHeader.classList.toggle("active");
-    const accordionItemBody = accordionItemHeader.nextElementSibling;
-    if(accordionItemHeader.classList.contains("active")) {
-      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-    }
-    else {
-      accordionItemBody.style.maxHeight = 0;
-    }
-    
-  });
-});
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

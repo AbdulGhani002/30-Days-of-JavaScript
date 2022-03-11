@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      #modal.open {
+        display: block;
+      }
+
+      #overlay.open {
+        display: block;
+      }
+      #modal {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid black;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        background-color: white;
+      }
+
+      #overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="open-modal-btn">Open Modal</button>
+
+    <div id="overlay"></div>
+
+    <div id="modal">
+      <h3>This is a modal</h3>
+      <button id="close-modal-btn">Close Modal</button>
+    </div>
+    <script defer src="13.Modal.js"></script>
+  </body>
+</html>
