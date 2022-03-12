@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      .errors {
+        background-color: hsl(0, 100%, 80%);
+        border-radius: 0.5rem;
+        padding: 10px;
+        color: hsl(0, 50%, 20%);
+        margin-bottom: 1rem;
+      }
+
+      #form {
+        margin: 1rem 0;
+      }
+
+      .error-title {
+        margin: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .errors-list {
+        margin: 0;
+        padding-left: 15px;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .errors {
+        display: none;
+      }
+
+      .errors.show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="10.thank-you.html" id="form">
+      <div class="errors">
+        <h3 class="error-title">Error</h3>
+        <ul class="errors-list"></ul>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+      </div>
+
+      <div class="form-group">
+        <label for="password-confirmation">Password Confirmation</label>
+        <input
+          type="password"
+          id="password-confirmation"
+          name="password-confirmation"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="terms">
+          <input type="checkbox" id="terms" name="terms" />
+          Agree To Terms?
+        </label>
+      </div>
+
+      <button type="submit">Create Account</button>
+    </form>
+    <script src="10.Form Validation.js" defer></script>
+  </body>
+</html>

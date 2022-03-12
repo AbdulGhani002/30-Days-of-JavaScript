@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <style>
+      .answer-item {
+        list-style: lower-alpha;
+      }
+
+      .question-item {
+        margin-bottom: 2rem;
+      }
+
+      .question-item.correct {
+        color: green;
+      }
+
+      .question-item.incorrect {
+        color: red;
+      }
+
+      .question-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .alert-title {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+      }
+
+      #alert {
+        font-size: 1.25rem;
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 1rem;
+        background-color: hsl(100, 80%, 80%);
+        border-radius: 0.5rem;
+        color: hsl(100, 80%, 20%);
+      }
+
+      #alert.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="alert">
+      <div class="alert-title">Congratulations!!</div>
+      You got them all right!
+    </div>
+    <form id="quiz-form">
+      <ol>
+        <li class="question-item">
+          <div>
+            What does this code return? (<code>0 || '' || false || "Hi"</code>)
+          </div>
+          <div>
+            <ol>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-1"
+                    value="false"
+                  />
+                  <code>0</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-1"
+                    value="true"
+                  />
+                  <code>"Hi"</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-1"
+                    value="false"
+                  />
+                  <code>false</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-1"
+                    value="false"
+                  />
+                  <code>''</code>
+                </label>
+              </li>
+            </ol>
+          </div>
+        </li>
+        <li class="question-item">
+          <div>What is it called when a function calls itself?</div>
+          <div>
+            <ol>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-2"
+                    value="false"
+                  />
+                  Inception
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-2"
+                    value="false"
+                  />
+                  Self-Referential
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-2"
+                    value="true"
+                  />
+                  Recursion
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-2"
+                    value="false"
+                  />
+                  Who Cares
+                </label>
+              </li>
+            </ol>
+          </div>
+        </li>
+        <li class="question-item">
+          <div>
+            How do you access the value of the <code>data-count</code> data
+            attribute in JavaScript?
+          </div>
+          <div>
+            <ol>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-3"
+                    value="true"
+                  />
+                  <code>element.dataset.count</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-3"
+                    value="false"
+                  />
+                  <code>element.dataAttribute.count</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-3"
+                    value="false"
+                  />
+                  <code>element.dataset.dataCount</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    selected
+                    class="answer"
+                    type="radio"
+                    name="answer-3"
+                    value="false"
+                  />
+                  <code>element.dataCount</code>
+                </label>
+              </li>
+            </ol>
+          </div>
+        </li>
+      </ol>
+      <button type="submit" id="submit">Check</button>
+    </form>
+    <script src="9.Quiz.js" defer></script>
+  </body>
+</html>
